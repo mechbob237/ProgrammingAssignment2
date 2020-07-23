@@ -1,4 +1,4 @@
-## Two functions to cache aninvertible matrix
+## Two functions to cache an invertible matrix
 ## and solve its inverse.
 
 ## Takes an inverible matrix and
@@ -20,8 +20,10 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set = set, get = get, setInv = setInv,getInv = getInv)
 }
 
-## Takes cached matrix from makeCacheMatrix 
-## and returns inverse as cacheSolve
+## Takes cached matrix from makeCacheMatrix,
+## checks to see if the inverse has been solved,
+## returns that if it has been solved, and if not,
+## solves and returns inverse as cacheSolve
 
 cacheSolve <- function(x, ...) {
   inv <- x$getInv()
